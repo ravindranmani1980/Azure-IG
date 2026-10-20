@@ -1,5 +1,5 @@
 import React from 'react';
-import { UploadCloud, Layers, RefreshCw, Bot, Sparkles, Box } from 'lucide-react';
+import { UploadCloud, Layers, RefreshCw, Bot, Sparkles, Box, ExternalLink } from 'lucide-react';
 
 export type DashboardTab = 'overview' | 'visuals' | 'trends' | 'subscriptions' | 'reservations' | 'invoices' | '3d';
 
@@ -25,15 +25,31 @@ export const TopNav: React.FC<TopNavProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-6">
-        {/* Zone 1: Brand Wordmark */}
+        {/* Zone 1: Brand Wordmark & Author Reference */}
         <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
           <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold shadow-xs">
             <Layers className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
-          <span className="text-base sm:text-lg font-bold tracking-tight text-slate-900 whitespace-nowrap">
-            <span className="hidden sm:inline">Azure Invoice Consolidator</span>
-            <span className="sm:hidden">Azure Invoices</span>
-          </span>
+          <div className="flex flex-col">
+            <span className="text-sm sm:text-base font-bold tracking-tight text-slate-900 leading-tight whitespace-nowrap">
+              <span className="hidden sm:inline">Azure Invoice Consolidator</span>
+              <span className="sm:hidden">Azure Invoices</span>
+            </span>
+            <div className="flex items-center gap-1.5 text-[11px] text-slate-500 leading-none mt-0.5">
+              <span>By <strong className="font-medium text-slate-700">Mani Ravindran</strong></span>
+              <span className="text-slate-300">·</span>
+              <a
+                href="https://ravidnran.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 font-medium hover:underline inline-flex items-center gap-0.5 transition-colors"
+                title="Author Website: ravidnran.in"
+              >
+                <span>ravidnran.in</span>
+                <ExternalLink className="w-2.5 h-2.5" />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Zone 2: Single-line Nav Links */}

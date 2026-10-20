@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": {
+    "name": "Mani Ravindran",
+    "url": "https://ravidnran.in"
+  },
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build",
