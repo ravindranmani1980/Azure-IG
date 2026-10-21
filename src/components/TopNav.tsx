@@ -39,13 +39,13 @@ export const TopNav: React.FC<TopNavProps> = ({
               <span>By <strong className="font-medium text-slate-700">Mani Ravindran</strong></span>
               <span className="text-slate-300">·</span>
               <a
-                href="https://ravidnran.in"
+                href="https://ravindran.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800 font-medium hover:underline inline-flex items-center gap-0.5 transition-colors"
-                title="Author Website: ravidnran.in"
+                title="Author Website: ravindran.in"
               >
-                <span>ravidnran.in</span>
+                <span>ravindran.in</span>
                 <ExternalLink className="w-2.5 h-2.5" />
               </a>
             </div>

@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, ExternalLink } from 'lucide-react';
 import type { NormalizedCostRecord } from './types/azure.ts';
 import { getInitialDemoRecords } from './data/sampleAzureInvoices.ts';
 import {
@@ -323,10 +323,21 @@ export default function App() {
       {/* Footer */}
       <footer className="border-t border-slate-200 bg-white py-6 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <div>
+          <div className="flex flex-wrap items-center gap-2">
             <span>Azure Invoice Consolidator & Multi-Subscription Analytics</span>
-            <span className="mx-2" aria-hidden="true">·</span>
-            <span>FinOps Foundation Compliant</span>
+            <span className="text-slate-300" aria-hidden="true">·</span>
+            <span>Created by <strong className="font-semibold text-slate-700">Mani Ravindran</strong></span>
+            <span className="text-slate-300" aria-hidden="true">·</span>
+            <a
+              href="https://ravindran.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 font-medium hover:underline inline-flex items-center gap-0.5 transition-colors"
+              title="Author Website: ravindran.in"
+            >
+              <span>ravindran.in</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <span>Reconciled {overallStats.invoiceCount} invoices across {overallStats.subscriptionCount} subscriptions</span>
